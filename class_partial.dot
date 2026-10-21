@@ -1,0 +1,11 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+
+main [label="{Main||+ main(String[])\l+ run(Scanner)\l}", fillcolor="#E2F0D9", color="#548235"];
+
+calc [label="{OrderCalculator|{MIN_QUANTITY=1\lMAX_QUANTITY=10000\lMIN_PRICE=0.01\lMAX_PRICE=5000000.0\lMIN_DISCOUNT=0.0\lMAX_DISCOUNT=30.0\lVAT_RATE=40.0\l}|+ validateQuantity(int):String\l+ validatePrice(double):String\l+ validateDiscount(double):String\l+ validate(int,double,double):String\l+ isValid(int,double,double):boolean\l+ calculateBase(int,double):double\l+ applyDiscount(double,double):double\l+ calculateVat(double,double):double\l+ calculateTotal(int,double,double,double):double\l}", fillcolor="#FDE9E7", color="#C00000"];
+
+main -> calc [label="uses"];
+}
